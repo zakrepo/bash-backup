@@ -5,6 +5,6 @@
   "features": {
   },
 
-  "build": { "dockerfile": "devcontainer_Dockerfile-ansible_no-features/Dockerfile_ansible" }
+  "build": { "dockerfile": "Dockerfile_ansible" }
 
 }
