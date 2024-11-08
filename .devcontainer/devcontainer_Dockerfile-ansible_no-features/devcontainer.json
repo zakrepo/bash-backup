@@ -1,0 +1,7 @@
+{
+  "name": "no_features_with_Dockerfile-ansible_dev-container",
+  
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+  }
+}
