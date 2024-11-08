@@ -1,4 +1,5 @@
 #FROM jenkins/jenkins
+FROM mcr.microsoft.com/devcontainers/universal:2
 
 
 #ARG BUILD_DATE_NOW
