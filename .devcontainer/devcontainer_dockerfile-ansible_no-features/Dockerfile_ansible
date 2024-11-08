@@ -71,7 +71,7 @@ RUN UBUNTU_CODENAME=focal && \
 
 ### will save small amount of space
 RUN sudo apt-get clean -y && \
-    asudo pt-get autoremove -y 
+    sudo pt-get autoremove -y 
 
 
 # drop back to the regular jenkins user - good practice
