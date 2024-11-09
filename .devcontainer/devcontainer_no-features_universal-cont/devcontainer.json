@@ -1,5 +1,5 @@
 {
-  "name": "no_features_no_dockerfile_dev-container",
+  "name": "no_features_no_dockerfile_BASE-dev-cont",
   
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
