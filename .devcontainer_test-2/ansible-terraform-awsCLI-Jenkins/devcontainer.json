@@ -1,0 +1,18 @@
+{
+
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb",
+    "storage": "32gb"
+  },
+
+  "name": "ansible-terraform-awsCLI-Jenkins_dockerfile_DevCon",
+
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+
+  "features": {
+  },
+
+  "build": { "dockerfile": "Dockerfile_ansible_terraform_aws_jenkins" }
+
+}

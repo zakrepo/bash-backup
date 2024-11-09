@@ -1,0 +1,83 @@
+#FROM jenkins/jenkins
+FROM mcr.microsoft.com/devcontainers/universal:2
+
+
+#ARG BUILD_DATE_NOW
+#ARG USER_NAME
+#ARG USER_PASS
+
+#ARG REPO_URL
+
+#ARG BUILD_SIGNATURE
+#ARG BUILD_SERVERMAINIP
+
+
+### I ADDED ALL ENVIRONMENT VARIABLES INSIDE THE CONTAINER IN THE FILE:
+### .../vip/docs/WORK/DevOps/jenkins/1training-courses/0DEFAULT_INSTALL_jenkins-ansible-docker/create-jenkins-container-with-ansible-and-docker-control/docker-compose.yaml
+
+#ENV CONTAINER_BUILD_DATE_NOW=$BUILD_DATE_NOW
+#ENV CONTAINER_BUILD_SIGNATURE=$BUILD_SIGNATURE
+#ENV CONTAINER_BUILD_SERVERMAINIP=$BUILD_SERVERMAINIP
+
+
+
+#USER root
+
+### Install ansible
+
+# RUN apt-get update && apt-get install wget gpg -y
+RUN sudo apt-get update && sudo apt-get install wget gpg jq curl wget -y
+
+#RUN UBUNTU_CODENAME=jammy && \
+RUN UBUNTU_CODENAME=focal && \
+    sudo wget -O- "https://keyserver.ubuntu.com/pks/lookup?fingerprint=on&op=get&search=0x6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367" | gpg --dearmour -o /usr/share/keyrings/ansible-archive-keyring.gpg && \
+    echo "deb [signed-by=/usr/share/keyrings/ansible-archive-keyring.gpg] http://ppa.launchpad.net/ansible/ansible/ubuntu $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/ansible.list && \
+    sudo apt update && sudo apt install ansible -y
+
+
+
+
+
+### install some useful packages
+#RUN apt-get install wget jq curl awk grep -y
+
+
+
+
+
+### INSTALL DOCKER CLIENT
+### Only docker binary to save image size
+# COPY --from=docker:cli /usr/local/bin/docker /usr/local/bin/
+
+### All binaries more disk space usage and larger image
+### If will copy all docker binary and extra plugins
+
+### Not working
+### COPY --from=docker:cli /usr/local/bin/docker /usr/local/libexec/docker/cli-plugins/docker-compose /usr/local/libexec/docker/cli-plugins/docker-buildx /usr/local/bin/
+### WORKING
+#COPY --from=docker:cli /usr/local/bin/docker /usr/local/bin/
+#COPY --from=docker:cli /usr/local/libexec/docker/cli-plugins/docker-compose /usr/local/libexec/docker/cli-plugins/docker-buildx /usr/local/libexec/docker/cli-plugins/
+
+
+###OR
+# cd /tmp
+# wget https://download.docker.com/linux/static/stable/x86_64/docker-25.0.4.tgz
+# tar xzf docker-25.0.4.tgz
+# mv docker/docker /usr/local/bin/
+# rm -rf docker-25.0.4.tgz docker/
+
+#RUN groupadd docker
+#RUN usermod -aG docker jenkins
+
+### will save small amount of space
+RUN sudo apt-get clean -y && \
+    sudo apt-get autoremove -y 
+
+
+# drop back to the regular jenkins user - good practice
+#USER jenkins
+
+
+
+
+
