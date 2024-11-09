@@ -1,7 +1,0 @@
-{
-  "name": "no_features_no_dockerfile_dev-container",
-  
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-  }
-}
