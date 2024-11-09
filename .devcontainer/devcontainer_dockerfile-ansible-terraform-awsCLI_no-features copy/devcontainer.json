@@ -6,7 +6,7 @@
     "storage": "32gb"
   },
 
-  "name": "2_dockerfile-ansible-terraform-awsCLI_DevContainer_no-features",
+  "name": "zzz_dockerfile-ansible-terraform-awsCLI_DevContainer_no-features",
 
   "image": "mcr.microsoft.com/devcontainers/universal:2",
 
