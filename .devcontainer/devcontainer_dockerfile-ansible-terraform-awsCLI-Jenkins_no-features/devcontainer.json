@@ -6,7 +6,7 @@
     "storage": "32gb"
   },
 
-  "name": "ansible-terraform-awsCLI-Jenkins_dockerfile_DevContainer_no-features",
+  "name": "ansible-terraform-awsCLI-Jenkins_dockerfile_DevCon",
 
   "image": "mcr.microsoft.com/devcontainers/universal:2",
 
