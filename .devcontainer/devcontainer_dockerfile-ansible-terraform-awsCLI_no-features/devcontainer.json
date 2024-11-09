@@ -1,0 +1,11 @@
+{
+  "name": "dockerfile-ansible-terraform-awsCLI_DevContainer_no-features",
+
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+
+  "features": {
+  },
+
+  "build": { "dockerfile": "Dockerfile_ansible" }
+
+}
