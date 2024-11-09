@@ -1,4 +1,11 @@
 {
+
+  "hostRequirements": {
+    "cpus": 8,
+    "memory": "8gb",
+    "storage": "32gb"
+  },
+
   "name": "dockerfile-ansible-terraform-awsCLI_DevContainer_no-features",
 
   "image": "mcr.microsoft.com/devcontainers/universal:2",
@@ -6,6 +13,6 @@
   "features": {
   },
 
-  "build": { "dockerfile": "Dockerfile_ansible" }
+  "build": { "dockerfile": "Dockerfile_ansible_terraform_aws" }
 
 }
