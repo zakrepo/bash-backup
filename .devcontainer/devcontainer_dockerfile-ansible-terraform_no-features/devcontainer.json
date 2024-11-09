@@ -1,5 +1,5 @@
 {
-  "name": "no_features_with_dockerfile-ansible-terraform_dev-container",
+  "name": "dockerfile-ansible-terraform_DevContainer_no-features",
 
   "image": "mcr.microsoft.com/devcontainers/universal:2",
 
