@@ -1,5 +1,5 @@
 {
-  "name": "no_features_no_dockerfile_dev-container",
+  "name": "no_features_no_dockerfile_BASE-dev-cont",
   
   "image": "docker pull mcr.microsoft.com/devcontainers/base:dev-ubuntu24.04",
   "features": {
