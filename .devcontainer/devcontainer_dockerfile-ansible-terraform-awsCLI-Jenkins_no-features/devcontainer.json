@@ -1,7 +1,7 @@
 {
 
 
-  "name": "ansible-terraform-awsCLI-Jenkins_dockerfile_DevCon",
+  "name": "zzz",
 
   "image": "mcr.microsoft.com/devcontainers/universal:2",
 
