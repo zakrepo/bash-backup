@@ -6,7 +6,7 @@
     "storage": "5gb"
   },
 
-  "name": "ansible-terraform-awsCLI-Jenkins_dockerfile_DevCon",
+  "name": "2cpu-5gb_ansible-terraform-awsCLI-Jenkins_dockerfile_DevCon",
 
   "image": "mcr.microsoft.com/devcontainers/universal:2",
 
