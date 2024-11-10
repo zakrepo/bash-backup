@@ -23,10 +23,21 @@ FROM mcr.microsoft.com/devcontainers/universal:2
 
 #USER root
 
+### Install useful packages
+
+# RUN apt-get update && apt-get install wget gpg -y
+# RUN sudo apt-get update && \
+#     sudo apt-get install wget gpg jq curl wget -y
+RUN sudo apt-get update && \
+    sudo apt-get install vim tmux screen wget curl gpg elinks bash-completion lsof sysstat tree tar iotop telnet netcat lftp dnsutils net-tools iputils* whois dstat htop cron strace jq lynx -y
+
+
+
+    
 ### Install ansible
 
 # RUN apt-get update && apt-get install wget gpg -y
-RUN sudo apt-get update && sudo apt-get install wget gpg jq curl wget -y
+# RUN sudo apt-get update && sudo apt-get install wget gpg jq curl wget -y
 
 #RUN UBUNTU_CODENAME=jammy && \
 RUN UBUNTU_CODENAME=focal && \

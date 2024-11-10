@@ -1,0 +1,34 @@
+
+
+-  The base Dev Container does not have docker installed
+And t looks blank
+
+- Looks like it is a blank container
+
+@zak3ar ➜ /workspaces/bash-backup (master) $ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          32G  1.9G   28G   7% /
+tmpfs            64M     0   64M   0% /dev
+shm              64M     0   64M   0% /dev/shm
+/dev/sdc1        44G   18G   24G  43% /tmp
+/dev/root        29G   24G  5.2G  83% /vscode
+/dev/loop5       32G  1.9G   28G   7% /workspaces
+tmpfs           3.9G     0  3.9G   0% /proc/acpi
+tmpfs           3.9G     0  3.9G   0% /proc/scsi
+tmpfs           3.9G     0  3.9G   0% /sys/firmware
+@zak3ar ➜ /workspaces/bash-backup (master) $ 
+
+
+
+@zak3ar ➜ /workspaces/bash-backup (master) $ service --status-all
+ [ - ]  procps
+ [ - ]  rsync
+@zak3ar ➜ /workspaces/bash-backup (master) $ 
+
+
+
+
+
+
+
+
